@@ -1,0 +1,20 @@
+name: minimalistV2
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-slim
+    steps:
+      - run : echo "Je construis"
+
+  test:
+    runs-on: ubuntu-slim
+      - run: echo "Je teste"
+
+  deploy:
+    runs-on: ubuntu-slim
+    needs:  [build, test]
+    steps: 
+      - run: echo "Deploy"
