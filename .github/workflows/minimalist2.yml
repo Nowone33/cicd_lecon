@@ -11,6 +11,8 @@ jobs:
 
   test:
     runs-on: ubuntu-24.04
+    needs: build
+    steps:
       - run: echo "Je teste"
 
   deploy:
