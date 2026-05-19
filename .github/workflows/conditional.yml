@@ -37,7 +37,7 @@ jobs:
   
   failed-job:
     name: Job qui echoue
-    if: vars.WATER == "warm"
+    if: vars.WATER == 'warm'
 
     runs-on: ubuntu-24.04
     steps:
