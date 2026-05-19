@@ -21,4 +21,25 @@ jobs:
         run: |
           echo "Current Date:" 
           date
-          echo "Triggered by: ${{ github.actor }}"       
+          echo "Triggered by: ${{ github.actor }}"
+
+
+
+  success-job:
+    name: Job qui marche
+    if: vars.WATER == 'cold'
+    runs-on: ubuntu-24.04
+    
+    steps:
+      - run: echo "Ca marche l'eau est froide"
+
+  
+  
+  success-job:
+    name: Job qui echoue
+    if: vars.WATER == "warm"
+
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "Ca ne marche pas l'eau est chaude"
+
