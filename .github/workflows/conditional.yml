@@ -19,8 +19,6 @@ jobs:
     steps:
       - name: Show Current Date
         run: |
-        echo "Current Date:" 
-        date
-        echo "Triggered by: ${{ github.actor }}" 
-
-      
+          echo "Current Date:" 
+          date
+          echo "Triggered by: ${{ github.actor }}"       
