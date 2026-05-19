@@ -16,7 +16,7 @@ jobs:
       - name: Test commande
         run: |
           echo "Hello World"
-          if [ true ] then echo "Vrai" ; fi
+          if [ true ]; then echo "Vrai" ; fi
         
   test-job:
     runs-on: ubuntu-slim
