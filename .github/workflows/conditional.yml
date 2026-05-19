@@ -1,0 +1,20 @@
+name: conditionnal-workflow
+
+jobs:
+  build:
+    name: build project
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "Lancement du build"
+
+
+  tell-time:
+    name: display launch time
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Show Current Date
+        run: | 
+        echo "Current Date:" date
+        echo "Triggered by: ${{github.actor}}" 
+
+      
